@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --headingcolor: #282828;
+    --button-titleblue: #1374F2; 
+}
+
+.top_discount-section {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.top_discount-section p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: moveText 12s linear infinite;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.header-container {
+    height: 65px;
+    width: 100vw;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.header-container .header-leftside {
+    text-transform: uppercase;
+    color: var(--headingcolor);
+    /* background-color: red; */
+    padding: 10px 0;
+}
+
+.header-container .header-leftside > h2 {
+    font-size: 23px;
+    font-weight: 800;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header-container .header-rightside {
+    /* background-color: purple; */
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+.header-container .header-rightside .rightside-container a {
+   margin-right: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+a:visited {
+    color: black;
+}
+
+/*Mobile Nav Menu Code*/
+    .mobile-navbar {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: -250px; /* hide off screen */
+  width: 250px;
+  height: 100vh;
+  background: white;
+  padding-top: 80px; /* space for header */
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  z-index: 998;
+}
+
+.mobile-navbar li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--headingcolor);
+}
+
+.close-item {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+}
+
+.close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+}
+
+
+/* When menu-toggle is checked → slide in */
+#menu-toggle:checked ~ .mobile-navbar {
+  right: 0;
+}
+
+/*Mobile Nav Menu Code*/
+
+
+.header-container .header-rightside .rightside-container {
+    /* background-color: blue; */
+    
+}
+
+.fa-magnifying-glass, .fa-heart, .fa-bag-shopping {
+    
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.4s ease;
+}
+#menu-toggle {
+    display: none;
+}
+
+.mobile-hamburgermenu {
+    display: none;
+}
+
+/* When checked → animate lines */
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
+  opacity: 0; /* middle line disappears */
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+/* End of Mobile and Tablet Code */
+
+/* Body Container Code */
+.feed-container {
+    height: 800px;
+    background-color: red;
+    padding: 20px;
+}
+
+.hero-container {
+    height: 300px;
+    width: 100%;
+    background-color: #1374F2;
+    margin-bottom: 20px;
+}
+
+.shoe_box-container {
+    height: 100px;
+    width: 100%;
+}
+
+.shoe_box-styling {
+    background-color: aquamarine;
+
+}
+
+.shoe_box-container-desktop {
+    display: none;
+}
+
+
+/* @media (min-width: 1280px) and (max-width: 1500px) {
+    .shoe_box-container {
+        display: none;
+    }
+
+    .shoe_box-container-desktop {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        background-color: aquamarine;
+    }
+
+    .shoe_box-styling {
+        background-color: ;
+    }
+} */
