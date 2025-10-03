@@ -566,7 +566,51 @@ a:visited {
 
 /*Begining of space divider container 3*/
 
+.space_divider-container3 {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+}
 
+.divider_container3-biography {
+    position: absolute;
+    /* top: 5%;
+    left: 5%; */
+    z-index: 2;
+    color: var(--headingcolor);
+     font-family: var(--quenx-fonts);
+     
+     display: flex;
+     flex-direction: column;
+     text-align: left;
+     padding-left: 30px;
+     padding-right: 400px;
+}
+
+.space_divider-container3 > img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.divider_container3-biography h2 {
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: black;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.divider_container3-biography p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: black;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
 
 
 
