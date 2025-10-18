@@ -16,11 +16,31 @@
         <div class="header-leftside">
             <h2>quenx.</h2>
         </div><!--End of Leftside Container-->
+        <div class="header_middle-desktop">
+            <nav>
+                <ul class="middle_header-items">
+                    <li>Shop All</li>
+                    <li>Best Sellers</li>
+                    <li>Active QX</li>
+                    <li>Artisanal</li>
+                    <li>Kids</li>
+                    <li>About Us</li>
+                </ul>
+            </nav>
+        </div><!--End of Middle side Container-->
         <div class="header-rightside">
+            
             <div class="rightside-container">
-                <a href="/">
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
+                </div>
+                <a href="#"><p class="desktop_login">Log In</p></a>
+                <div class="magnify_glass-transform-container">
+                    <a href="/">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
                 <a href="/">
                     <i class="fa-regular fa-heart"></i>
                 </a>
@@ -47,7 +67,7 @@
         </div><!--End of Rightside Container-->
     </header>
     <!--Body Section-->
-    <section class="feed-container-top feed-styling">
+    <section class="feed-container-top feed-styling feed_styling-top">
         <div class="hero-container">
             <div class="hero-container-title">
                 <h2>Walking</h2>
@@ -56,13 +76,29 @@
                 <p>Premium Vegan Sneakers</p>
             </div>
             <img src="images/ebb6aaf8-8426-4aa7-82ed-5f5dc53bcfe21751524892560-HRX-by-Hrithik-Roshan-Men-Textured-Lace-Up-Running-Shoes-736-1.jpg" alt="orange running shoes" class="hero-container-img">
+            <img src="images/ChatGPT Image Oct 16, 2025, 11_31_43 PM.jpg" alt="orange running shoes" class="hero-container-img-desktop">
             <!--Desktop Shoebox Container-->
-            <div class="shoe_box-container-desktop shoe_box-styling">
-                <h2>Shoe Box container</h2>
+            <div class="shoe_box-container-desktop">
+                <div class="shoe-image-container">
+                <div class="shoe_box-container-title title-styling">
+                    <h2>Sale</h2>
+                </div>
+                    <img src="images/Screenshot 2025-09-16 111625.png" alt="Blue running sneaker">
+                </div>
+                <div class="shoe_box-container-bottomsection">
+                    <div class="bottomsection-content">
+                        <p>Bio Runner</p>
+                        <span><s>$119.00</s></span><span>$99.00</span>
+                    </div>
+                    <form action="#">
+                        <button class="shoe_box-cartbutton button-styling">Add To Cart</button>
+                    </form>
+                </div>    
             </div>
             <!--Desktop Shoebox Container-->
         </div>
         <!--End of Hero Container-->
+        <!--Mobile Shoebox Container-->
         <div class="shoe_box-container shoe_box-styling">
             <div class="shoe-image-container">
                 <div class="shoe_box-container-title title-styling">
@@ -79,7 +115,7 @@
                         <button class="shoe_box-cartbutton button-styling">Add To Cart</button>
                     </form>
             </div>
-        </div><!--End of shoebox container-->
+        </div><!--End of Mobile shoebox container-->
         <!--Begining of space divider section 1-->
         <div class="space_divider-container1">
             <p>our best sellers</p>
@@ -141,7 +177,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!--End of Shoe grid container 1-->
         
         <div class="discount-container">
             <div class="top_discount-container">
@@ -166,19 +202,26 @@
             </div>
         </div>
         <div class="middle_tripleshoe-container">
-            <img src="images/Active QX.avif" alt="">
-            <div class="tripleshoe-textcontainer"><span>Active QX</span><span><i class="fa-solid fa-arrow-right"></i></span></div>
-            <img src="images/Bio Orginal.avif" alt="">
-            <div class="tripleshoe-textcontainer"><span>Kids</span><span><i class="fa-solid fa-arrow-right"></i></span></div>
-            <img src="images/Bio Perform.avif" alt="">
-            <div class="tripleshoe-textcontainer"><span>artisinal</span><span><i class="fa-solid fa-arrow-right"></i></span></div>
+            <div class="shoe-item">
+                <img src="images/Active QX.avif" alt="">
+                <div class="tripleshoe-textcontainer"><span>Active QX</span><span><i class="fa-solid fa-arrow-right"></i></span></div>
+            </div>
+            <div class="shoe-item">
+                <img src="images/Bio Orginal.avif" alt="">
+                <div class="tripleshoe-textcontainer"><span>Kids</span><span><i class="fa-solid fa-arrow-right"></i></span></div>
+            </div>
+            <div class="shoe-item">
+                <img src="images/Bio Perform.avif" alt="">
+                <div class="tripleshoe-textcontainer"><span>artisinal</span><span><i class="fa-solid fa-arrow-right"></i></span></div>
+            </div>
         </div>
     </section>
     <div class="space_divider-container3">
         <div class="divider_container3-biography-container">
             <div class="divider_container3-biography">
-                <h2>Step Into</h2>
-                <h2>Sustainability</h2>
+                <h2 class="divider_container3-mobile">Step Into</h2>
+                <h2 class="divider_container3-mobile">Sustainability</h2>
+                <h2 class="divider_container3-desktop">Step Into Sustainability</h2>
                 <p>This is the space to introduce visitors to the business or brand. Briefly explain who's behind it, what it does and what makes it unique. Share its core values and what this site has to offer.</p>
             </div>
         </div>
@@ -227,53 +270,68 @@
     </section><!--End of feed container bottom-->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-columns">
-                <div class="footer_columns-box">
-                    <h2>Shop</h2>
-                    <ul>
-                        <li>All Products</li>
-                        <li>Best Sellers</li>
-                        <li>Active QX</li>
-                        <li>Artisanal</li>
-                        <li>Kids</li>
-                        <li>About Us</li>
-                    </ul>
+                <div class="footer-columns">
+                    <div class="footer_columns-box">
+                        <h2>Shop</h2>
+                        <ul>
+                            <li>All Products</li>
+                            <li>Best Sellers</li>
+                            <li>Active QX</li>
+                            <li>Artisanal</li>
+                            <li>Kids</li>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                    <div class="footer_columns-box">
+                        <h2>Policies</h2>
+                        <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>Shipping Policy</li>
+                            <li>Refund Policy</li>
+                            <li>Accessibility Statement</li>
+                        </ul>
+                    </div>
+                    <div class="footer_columns-box">
+                        <h2>Contact</h2>
+                        <ul>
+                            <li>500 Terry Francine St.</li>
+                            <li>San Francisco, CA 94158</li>
+                            <li>123-456-7890</li>
+                            <li>info@mysite.com</li>
+                        </ul>
+                    </div>
+                    <div class="footer_columns-box">
+                        <h2>Social</h2>
+                        <ul>
+                            <li>Instagram</li>
+                            <li>Facebook</li>
+                            <li>X</li>
+                            <li>TikTok</li>
+                        </ul>
+                    </div>
+                </div><!--End of container of column boxes-->
+                <div class="space_divider-container5">
+                    <h3>stay in the loop</h3>
+                    <p>Sign up to recieve updates and special offers</p>
                 </div>
-                <div class="footer_columns-box">
-                    <h2>Shop</h2>
-                    <ul>
-                        <li>All Products</li>
-                        <li>Best Sellers</li>
-                        <li>Active QX</li>
-                        <li>Artisanal</li>
-                        <li>Kids</li>
-                        <li>About Us</li>
-                    </ul>
+                <form action="" class="footer_email-section">
+                    <div class="footer_email-container">
+                        <input type="email" placeholder="Email Address*" required>
+
+                        <div class="newsletter-option">
+                            <input type="checkbox" id="option1" name="newsletter-radio">
+                            <label for="option1">Yes, subscribe me to your newsletter</label>
+                        </div>
+
+                        <button class="footer_signup-button">sign up</button>
+                    </div>
+                </form>
+                <div class="final_space-divider-container">
+                    <h1>quenx.</h1>
+                    <p>&copy; 2035 by Quenx. Built on <u>HTML and CSS</u></p>
                 </div>
-                <div class="footer_columns-box">
-                    <h2>Shop</h2>
-                    <ul>
-                        <li>All Products</li>
-                        <li>Best Sellers</li>
-                        <li>Active QX</li>
-                        <li>Artisanal</li>
-                        <li>Kids</li>
-                        <li>About Us</li>
-                    </ul>
-                </div>
-                <div class="footer_columns-box">
-                    <h2>Shop</h2>
-                    <ul>
-                        <li>All Products</li>
-                        <li>Best Sellers</li>
-                        <li>Active QX</li>
-                        <li>Artisanal</li>
-                        <li>Kids</li>
-                        <li>About Us</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            </div> <!--End of Footer container-->
     </footer>
 </body>
 </html>
