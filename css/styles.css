@@ -60,6 +60,7 @@
     font-size: 23px;
     font-weight: 800;
     font-family: var(--quenx-fonts);
+    cursor: pointer;
 }
 
 .header-container .header-rightside {
@@ -72,6 +73,10 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+}
+
+.header-rightside .rightside-container i:hover{
+    color: var(--button-titleblue);
 }
 
 .header-container .header-rightside .rightside-container a {
@@ -994,7 +999,7 @@ a:visited {
             .search-container {
                 display: block;
                 height: 30px;
-                 width: 110px;
+                 width: 150px;
                 /* background-color: blue; */
                 margin-right: 50px;
                 position: relative;
@@ -1024,6 +1029,11 @@ a:visited {
                 white-space: nowrap;
                 font-family: sans-serif;
                 cursor: pointer;
+                color: black;
+            }
+
+            .desktop_login:hover {
+                color: blue;
             }
                 /*End Login Desktop Bar Section*/
 
@@ -1331,21 +1341,30 @@ a:visited {
                 white-space: nowrap;
                 font-family: sans-serif;
                 cursor: pointer;
+                color: black;
+            }
+
+            .desktop_login:hover {
+                color: var(--button-titleblue);
             }
 
             /*Hero Section*/
             .hero-container {
                 height: 670px;
+
+                background-image: url('/images/ChatGPT\ Image\ Oct\ 16\,\ 2025\,\ 11_31_43\ PM.jpg');
+                background-size: cover;
             }
             .hero-container-img {
                 display: none;
             }
-            .hero-container-img-desktop {
+            /* .hero-container-img-desktop {
                 display: inline-block;
                 object-fit: cover;
-                height: auto;
+                height: 700px;
                 width: 100%;
-            }
+                background: url('images\ChatGPT Image Oct 16, 2025, 11_31_43 PM.jpg');
+            } */
             /*End of Hero Section*/
 
             
@@ -1410,9 +1429,28 @@ a:visited {
         /* End of Shoe Grid Styling One  */
 
         /*Desktop Shoe Container */
+        
         .discount-container {
             display: flex;
             justify-content: space-between;
+            transform: translateX(-120px); /*Starts fully off screen*/
+            animation: fadeInLeftStrong 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInLeftStrong {
+            0% {
+                opacity: 0;
+                transform: translateX(-120px);
+            }
+             60% {
+                opacity: 1;
+                transform: translateX(20px); /*Overshoots a little for a natural slide*/
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);/*settles in place*/
+            }
         }
 
         .top_discount-container {
@@ -1521,7 +1559,7 @@ a:visited {
             padding: 20px 0 0 21px;
         }
         .footer-columns {
-            background-color: blue;
+            /* background-color: blue; */
             grid-template-columns: repeat(4, 1fr);
             gap: 0px 0px; 
             padding-bottom: 20px;
@@ -1629,11 +1667,19 @@ a:visited {
                 white-space: nowrap;
                 font-family: sans-serif;
                 cursor: pointer;
+                color: black;
+            }
+
+            .desktop_login:hover {
+                color: var(--button-titleblue);
             }
 
             /*Hero Section*/
             .hero-container {
-                height: 710px;
+                height: 670px;
+
+                background-image: url('/images/ChatGPT\ Image\ Oct\ 16\,\ 2025\,\ 11_31_43\ PM.jpg');
+                background-size: cover;
             }
             .hero-container-title {
                 position: absolute;
@@ -1719,6 +1765,43 @@ a:visited {
         .discount-container {
             display: flex;
             justify-content: space-between;
+            transform: translateX(-120px); /*Starts fully off screen*/
+            animation: fadeInLeftStrong 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInLeftStrong {
+            0% {
+                opacity: 0;
+                transform: translateX(-120px);
+            }
+             60% {
+                opacity: 1;
+                transform: translateX(20px); /*Overshoots a little for a natural slide*/
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);/*settles in place*/
+            }
+        }
+
+        .top_discount-container {
+            /* background-color: red; */
+            width: 500px;
+            padding-top: 230px;
+            padding-left: 25px;
+        }
+        .top_discount-container h4 {
+            font-size: 53px;
+        }
+        .top_discount-container p {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .bottom_discount-container  {
+            height: 570px;
+            width: 50%;
         }
 
         .top_discount-container {
@@ -1789,6 +1872,7 @@ a:visited {
             .divider_container3-desktop {
                 display: block;
             }
+
             .divider_container3-biography h2 {
                 font-size: 48px;
                 padding: 0 0 0 50px;
@@ -1805,35 +1889,59 @@ a:visited {
              .testimonial_section {
                 flex-direction: row;
                 display: flex;
+                justify-content: space-between;
             }
             .testimonial_container-styling {
                 height: 330px;
                 display: flex;
                 margin-right: 12px;
+                 padding: 30px 10px 13px 1px;
             }
             .testimonial_container-content h2 {
-                font-size: 16px;
+                font-size: 22px;
             }
             .testimonial_container-content > p {
-                line-height: 25px;
+                font-size: 16px;
+                line-height: 30px;
             }
 
         /*End of Testimonial container section*/  
-        /*Footer Section*/
+         /*Footer Section*/
+            .footer {
+            width: 100%;
+            display: block;
+        }
+        
         .footer-container {
-            background-color: red;
-            width: 100%;
-            display: flex;
-            padding: 10px 0 0 5px;
-        }
-        .footer-columns {
-            background-color: blue;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0px 0px; 
-        }
-        .footer_signup-button {
-            width: 100%;
-        }
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+            padding: 40px 100px;
+            box-sizing: border-box;
+            background-color: #282828;
+            max-width: 1900px;
+            }
+
+            .footer-columns {
+            display: contents; /* lets each column stretch naturally */
+            }
+
+            .footer_columns-box h2 {
+            color: white;
+            font-size: 1.3rem;
+            }
+
+            .footer_columns-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            .footer_columns-box li {
+            color: white;
+            line-height: 1.9;
+            font-size: 20px;
+            }
 
 
     }
@@ -1841,7 +1949,7 @@ a:visited {
 /* Ending of 1001-1024px range */
 
 /* ====== Large Desktop / Wide Monitors ====== */
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1919px) {
     .mobile-hambugermenu {
             display: none;
         }
@@ -1869,7 +1977,7 @@ a:visited {
 
         .header-container {
             padding: 0 30px;
-            background-color: red;
+            /* background-color: red; */
         }
        
         .header-container .header-leftside h2 {
@@ -1884,7 +1992,6 @@ a:visited {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12.5px;
         }
-
 
 
         .middle_header-items li {
@@ -1930,12 +2037,22 @@ a:visited {
                 white-space: nowrap;
                 font-family: sans-serif;
                 cursor: pointer;
+                color: black;
+            }
+
+            .desktop_login:hover {
+                color: var(--button-titleblue);
             }
 
             /*Hero Section*/
-            .hero-container {
-                height: 710px;
-            }
+              .hero-container {
+                height: 780px;
+                background-image: url('/images/ChatGPT\ Image\ Oct\ 16\,\ 2025\,\ 11_31_43\ PM.jpg');
+                background-size: cover;
+                background-position: center 60%; /* move focus upward to show more shoes */
+                background-repeat: no-repeat;
+                }
+
             .hero-container-title {
                 position: absolute;
                 top: 10%;
@@ -1946,12 +2063,6 @@ a:visited {
             }
             .hero-container-img {
                 display: none;
-            }
-            .hero-container-img-desktop {
-                display: inline-block;
-                object-fit: cover;
-                height: auto;
-                width: 100%;
             }
             /*End of Hero Section*/
 
@@ -2020,6 +2131,43 @@ a:visited {
         .discount-container {
             display: flex;
             justify-content: space-between;
+            transform: translateX(-120px); /*Starts fully off screen*/
+            animation: fadeInLeftStrong 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInLeftStrong {
+            0% {
+                opacity: 0;
+                transform: translateX(-120px);
+            }
+             60% {
+                opacity: 1;
+                transform: translateX(20px); /*Overshoots a little for a natural slide*/
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);/*settles in place*/
+            }
+        }
+
+        .top_discount-container {
+            /* background-color: red; */
+            width: 500px;
+            padding-top: 230px;
+            padding-left: 25px;
+        }
+        .top_discount-container h4 {
+            font-size: 53px;
+        }
+        .top_discount-container p {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .bottom_discount-container  {
+            height: 570px;
+            width: 50%;
         }
 
         .top_discount-container {
@@ -2100,55 +2248,121 @@ a:visited {
             /*End of Space Divider Container of Desktop */
 
                /*Testimonial container section*/
-            .testimonial_container-styling {
-                margin-top: 10px;
-            }
-             .testimonial_section {
+            .testimonial_section {
                 flex-direction: row;
-                display: flex;
+                
             }
+
             .testimonial_container-styling {
-                height: 330px;
+                max-width: 800px;
+                height: 400px;
+                /* padding: 30px 10px 13px 9px; */
+                margin-right: 20px;
                 display: flex;
-                margin-right: 12px;
+                /* align-items: center; */
             }
+
+            .testimonial_container-content {
+                /* background-color: red; */
+                padding: 10px 0 17px 31px;
+            }
+
             .testimonial_container-content h2 {
-                font-size: 16px;
+                font-size: 30px;
             }
+
             .testimonial_container-content > p {
-                line-height: 25px;
+                font-size: 20px;
+                line-height: 40px;
             }
+
+            
+            .testimonial_content-item .testimonial_content-img {
+                height: 60px;
+                 width: 60px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+
+            .testimonial_content-item .testimonial_content-name {
+                font-size: 20px;
+            }  
 
         /*End of Testimonial container section*/  
         /*Footer Section*/
+           /*Footer Section*/
+            .footer {
+            width: 100%;
+            display: block;
+        }
+        
         .footer-container {
-            background-color: red;
-            width: 100%;
-            display: flex;
-            padding: 10px 0 0 5px;
-        }
-        .footer-columns {
-            background-color: blue;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0px 0px; 
-        }
-        .footer_signup-button {
-            width: 100%;
-        }
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+            padding: 40px 100px;
+            box-sizing: border-box;
+            background-color: #282828;
+            max-width: 1900px;
+            }
+
+            .footer-columns {
+            display: contents; /* lets each column stretch naturally */
+            }
+
+            .footer_columns-box h2 {
+            color: white;
+            font-size: 1.3rem;
+            }
+
+            .footer_columns-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            .footer_columns-box li {
+            color: white;
+            line-height: 1.9;
+            font-size: 20px;
+            }
 }
 
 
 
 /*End of media query 1441-1920px */
 
-@media (min-width: 1921px) and (max-width: 2540px){
+@media (min-width: 1920px) and (max-width: 2540px){
   .mobile-hambugermenu {
             display: none;
         }
 
+         .magnify_glass-transform-container {
+            border-radius: 50%;
+            width: 35px;
+            background-color: black;
+            height: 35px;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .header-rightside .fa-magnifying-glass::before {
+            content: "\f007";
+            font-family: "Font Awesome 6 free";
+            font-weight: 900;
+            font-size: 22px;
+            color: white;
+            position: absolute;
+            left: 8px;
+            bottom: 4px;
+        }
+
+        .header-container .header-rightside .rightside-container a {
+           padding-right: 10px;
+        }
+
         .header-container {
-            padding: 0 30px;
-            background-color: red;
+            padding: 40px 40px;
         }
 
         .header-container .header-leftside h2 {
@@ -2161,7 +2375,8 @@ a:visited {
         .header_middle-desktop .middle_header-items {
             display: flex;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 12.5px;
+            font-size: 16.5px;
+            /* background-color: red; */
         }
 
 
@@ -2178,7 +2393,7 @@ a:visited {
             .search-container {
                 display: block;
                 height: 30px;
-                 width: 110px;
+                 width: 177px;
                 /* background-color: blue; */
                 margin-right: 50px;
                 position: relative;
@@ -2192,7 +2407,11 @@ a:visited {
                 top: 10px;
                 position: absolute;
             }
-            
+
+            .search-container .fa-magnifying-glass::before:hover {
+                color: var(--button-titleblue);
+            }
+
             .search-container .search-bar {
                 width: 100%;
                 height: 100%;
@@ -2209,16 +2428,33 @@ a:visited {
                 white-space: nowrap;
                 font-family: sans-serif;
                 cursor: pointer;
+                color: black;
+            }
+
+            .desktop_login:hover {
+                color: var(--button-titleblue);
             }
 
             /*Hero Section*/
+           
             .hero-container {
-                height: 710px;
-            }
+                height: 750px;
+                background-image: url('/images/ChatGPT\ Image\ Oct\ 16\,\ 2025\,\ 11_31_43\ PM.jpg');
+                background-size: cover;
+                background-position: center 60%; /* move focus upward to show more shoes */
+                background-repeat: no-repeat;
+                }
+
+
+
+
+
+
             .hero-container-title {
                 position: absolute;
                 top: 10%;
                 left: 10%;
+                z-index: 2;
             }
             .hero-container-title h2 {
                 font-size: 65px;
@@ -2226,12 +2462,12 @@ a:visited {
             .hero-container-img {
                 display: none;
             }
-            .hero-container-img-desktop {
-                display: inline-block;
-                object-fit: cover;
-                height: auto;
-                width: 100%;
-            }
+
+
+            /* Hero Section (1920px+) */
+
+
+
             /*End of Hero Section*/
 
             
@@ -2248,7 +2484,7 @@ a:visited {
             background-color: #fff;
             border-radius: 12px;
             padding: 20px;
-            width: 300px;
+            width: 350px;
             min-height: 340px;
             z-index: 10; /* 👈 ensures it’s above the image */
         }
@@ -2273,11 +2509,11 @@ a:visited {
              padding: 0 20px 0 20px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            gap: 15px;
+            gap: 50px;
         }  
         .box {
             position: relative;
-            flex: 0 0 280px;
+            flex: 0 0 315px;
             scroll-snap-align: start;
             overflow: hidden;
         }
@@ -2322,6 +2558,20 @@ a:visited {
 
         /*Ending of Desktop Shoe Container */
 
+        /*space divider container 1*/
+        .space_divider-container1 {
+            padding: 0 40px;
+        }
+
+        .space_divider-container1 > p {
+            font-size: 25px;
+        }
+
+        .divider-container1-child {
+            font-size: 30px;
+        }
+        /*space divider container 1*/
+
         /*Desktop middleshoe container */
         .middle_tripleshoe-container {
             display: flex;
@@ -2360,7 +2610,16 @@ a:visited {
         .divider_container3-biography {
                 /* background-color: #0f5ec4; */
                 flex-direction: row;
-                padding: 20px 0 0 0;
+                        padding: 21px 94px 0 67px;
+            }
+
+            .divider_container3-biography h2 {
+                font-size: 55px;
+            }
+
+            .divider_container3-biography p {
+                line-height: 30px;
+                font-size: 25px;
             }
             
             .divider_container3-mobile {
@@ -2379,50 +2638,117 @@ a:visited {
             /*End of Space Divider Container of Desktop */
 
                /*Testimonial container section*/
-            .testimonial_container-styling {
-                margin-top: 10px;
-            }
-             .testimonial_section {
+            .testimonial_section {
                 flex-direction: row;
-                display: flex;
+                
             }
+
             .testimonial_container-styling {
-                height: 330px;
+                max-width: 800px;
+                height: 500px;
+                /* padding: 30px 10px 13px 9px; */
+                margin-right: 20px;
                 display: flex;
-                margin-right: 12px;
+                /* align-items: center; */
             }
+
+            .testimonial_container-content {
+                /* background-color: red; */
+                padding: 60px 0 17px 31px;
+            }
+
             .testimonial_container-content h2 {
-                font-size: 16px;
+                font-size: 30px;
             }
+
             .testimonial_container-content > p {
-                line-height: 25px;
+                font-size: 23px;
+                line-height: 45px;
             }
+
+            
+            .testimonial_content-item .testimonial_content-img {
+                height: 80px;
+                 width: 80px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+
+            .testimonial_content-item .testimonial_content-name {
+                font-size: 30px;
+            }   
 
         /*End of Testimonial container section*/  
         /*Footer Section*/
+            .footer {
+            width: 100%;
+            display: block;
+        }
+        
         .footer-container {
-            background-color: red;
-            width: 100%;
-            display: flex;
-            padding: 10px 0 0 5px;
-        }
-        .footer-columns {
-            background-color: blue;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0px 0px; 
-        }
-        .footer_signup-button {
-            width: 100%;
-        }
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+            padding: 40px 100px;
+            box-sizing: border-box;
+            background-color: #282828;
+            max-width: 1900px;
+            }
+
+            .footer-columns {
+            display: contents; /* lets each column stretch naturally */
+            }
+
+            .footer_columns-box h2 {
+            color: white;
+            font-size: 1.3rem;
+            }
+
+            .footer_columns-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            .footer_columns-box li {
+            color: white;
+            line-height: 1.9;
+            font-size: 20px;
+            }
+
 }
 
 @media (min-width: 2560px) {
-     .mobile-hambugermenu {
+       .mobile-hambugermenu {
             display: none;
         }
 
+         .magnify_glass-transform-container {
+            border-radius: 50%;
+            width: 35px;
+            background-color: black;
+            height: 35px;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .header-rightside .fa-magnifying-glass::before {
+            content: "\f007";
+            font-family: "Font Awesome 6 free";
+            font-weight: 900;
+            font-size: 22px;
+            color: white;
+            position: absolute;
+            left: 8px;
+            bottom: 4px;
+        }
+
+        .header-container .header-rightside .rightside-container a {
+           padding-right: 10px;
+        }
+
         .header-container {
-            padding: 0 20px;
+            padding: 40px 40px;
         }
 
         .header-container .header-leftside h2 {
@@ -2435,7 +2761,8 @@ a:visited {
         .header_middle-desktop .middle_header-items {
             display: flex;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 12.5px;
+            font-size: 16.5px;
+            /* background-color: red; */
         }
 
 
@@ -2452,7 +2779,7 @@ a:visited {
             .search-container {
                 display: block;
                 height: 30px;
-                 width: 110px;
+                 width: 177px;
                 /* background-color: blue; */
                 margin-right: 50px;
                 position: relative;
@@ -2466,7 +2793,11 @@ a:visited {
                 top: 10px;
                 position: absolute;
             }
-            
+
+            .search-container .fa-magnifying-glass::before:hover {
+                color: var(--button-titleblue);
+            }
+
             .search-container .search-bar {
                 width: 100%;
                 height: 100%;
@@ -2483,16 +2814,33 @@ a:visited {
                 white-space: nowrap;
                 font-family: sans-serif;
                 cursor: pointer;
+                color: black;
+            }
+
+            .desktop_login:hover {
+                color: var(--button-titleblue);
             }
 
             /*Hero Section*/
+           
             .hero-container {
-                height: 710px;
-            }
+                height: 850px;
+                background-image: url('/images/ChatGPT\ Image\ Oct\ 16\,\ 2025\,\ 11_31_43\ PM.jpg');
+                background-size: cover;
+                background-position: center 60%; /* move focus upward to show more shoes */
+                background-repeat: no-repeat;
+                }
+
+
+
+
+
+
             .hero-container-title {
                 position: absolute;
                 top: 10%;
                 left: 10%;
+                z-index: 2;
             }
             .hero-container-title h2 {
                 font-size: 65px;
@@ -2500,12 +2848,12 @@ a:visited {
             .hero-container-img {
                 display: none;
             }
-            .hero-container-img-desktop {
-                display: inline-block;
-                object-fit: cover;
-                height: auto;
-                width: 100%;
-            }
+
+
+            /* Hero Section (1920px+) */
+
+
+
             /*End of Hero Section*/
 
             
@@ -2522,8 +2870,8 @@ a:visited {
             background-color: #fff;
             border-radius: 12px;
             padding: 20px;
-            width: 300px;
-            min-height: 340px;
+            width: 400px;
+            min-height: 600px;
             z-index: 10; /* 👈 ensures it’s above the image */
         }
 
@@ -2547,11 +2895,11 @@ a:visited {
              padding: 0 20px 0 20px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            gap: 15px;
+            gap: 50px;
         }  
         .box {
             position: relative;
-            flex: 0 0 280px;
+            flex: 0 0 315px;
             scroll-snap-align: start;
             overflow: hidden;
         }
@@ -2596,6 +2944,20 @@ a:visited {
 
         /*Ending of Desktop Shoe Container */
 
+        /*space divider container 1*/
+        .space_divider-container1 {
+            padding: 0 40px;
+        }
+
+        .space_divider-container1 > p {
+            font-size: 25px;
+        }
+
+        .divider-container1-child {
+            font-size: 30px;
+        }
+        /*space divider container 1*/
+
         /*Desktop middleshoe container */
         .middle_tripleshoe-container {
             display: flex;
@@ -2634,7 +2996,17 @@ a:visited {
         .divider_container3-biography {
                 /* background-color: #0f5ec4; */
                 flex-direction: row;
-                padding: 20px 0 0 0;
+                padding: 30px 124px 0 268px;
+            }
+
+            
+            .divider_container3-biography h2 {
+                line-height: 1.3;
+            }
+
+            .divider_container3-biography p {
+                line-height: 50px;
+                font-size: 35px;
             }
             
             .divider_container3-mobile {
@@ -2643,51 +3015,102 @@ a:visited {
             .divider_container3-desktop {
                 display: block;
             }
+
             .divider_container3-biography h2 {
-                font-size: 48px;
+                font-size: 61px;
                 padding: 0 0 0 50px;
             }
             .divider_container3-biography p {
                 padding: 0 30px 0 70px;
             }
             /*End of Space Divider Container of Desktop */
+            
+            .space_divider-container4 {
+                padding: 40px 50px;
+            }
+
+            .feed-container-bottom .space_divider-container4 > p  {
+                font-size: 30px;
+            }
 
                /*Testimonial container section*/
-            .testimonial_container-styling {
-                margin-top: 10px;
-            }
-             .testimonial_section {
+            .testimonial_section {
                 flex-direction: row;
-                display: flex;
+                
             }
+
             .testimonial_container-styling {
-                height: 330px;
+                max-width: 800px;
+                height: 600px;
+                /* padding: 30px 10px 13px 9px; */
+                margin-right: 20px;
                 display: flex;
-                margin-right: 12px;
+                /* align-items: center; */
             }
+
+            .testimonial_container-content {
+                /* background-color: red; */
+                padding: 60px 0 17px 31px;
+            }
+
             .testimonial_container-content h2 {
-                font-size: 16px;
+                font-size: 40px;
             }
+
             .testimonial_container-content > p {
-                line-height: 25px;
+                font-size: 30px;
+                line-height: 45px;
             }
+
+            
+            .testimonial_content-item .testimonial_content-img {
+                height: 80px;
+                 width: 80px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+
+            .testimonial_content-item .testimonial_content-name {
+                font-size: 30px;
+            }   
 
         /*End of Testimonial container section*/  
         /*Footer Section*/
+            .footer {
+            width: 100%;
+            display: block;
+        }
+        
         .footer-container {
-            background-color: red;
-            width: 100%;
-            display: flex;
-            padding: 10px 0 0 5px;
-        }
-        .footer-columns {
-            background-color: blue;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0px 0px; 
-        }
-        .footer_signup-button {
-            width: 100%;
-        }
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+            padding: 40px 100px;
+            box-sizing: border-box;
+            background-color: #282828;
+            max-width: 3000px;
+            }
+
+            .footer-columns {
+            display: contents; /* lets each column stretch naturally */
+            }
+
+            .footer_columns-box h2 {
+            color: white;
+            font-size: 1.8rem;
+            }
+
+            .footer_columns-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            .footer_columns-box li {
+            color: white;
+            line-height: 1.9;
+            font-size: 20px;
+            }
 }
 
 /* End of Media Query Section */
