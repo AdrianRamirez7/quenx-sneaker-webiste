@@ -73,6 +73,11 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+
+}
+
+.header-rightside .rightside-container i {
+    color: black;
 }
 
 .header-rightside .rightside-container i:hover{
@@ -90,6 +95,7 @@
     width: 32px;
     height: 32px;
 }
+
 
 .header-rightside i {
     line-height: 1;
@@ -991,6 +997,14 @@ a:visited {
             bottom: 4px;
         }
 
+        .header-rightside .rightside-container i {
+    color: black;
+}
+
+.header-rightside .rightside-container i:hover{
+    color: var(--button-titleblue);
+}
+
         /* .mobile-hambugermenu {
             display: none;
         } */
@@ -1287,6 +1301,14 @@ a:visited {
             left: 8px;
             bottom: 4px;
         }
+
+        .header-rightside .rightside-container i {
+    color: black;
+}
+
+.header-rightside .rightside-container i:hover{
+    color: var(--button-titleblue);
+}
 
 
         .header_middle-desktop {
@@ -1630,6 +1652,14 @@ a:visited {
             left: 8px;
             bottom: 4px;
         }
+
+        .header-rightside .rightside-container i {
+    color: black;
+}
+
+.header-rightside .rightside-container i:hover{
+    color: var(--button-titleblue);
+}
 
 
         .header-container {
@@ -2009,6 +2039,14 @@ a:visited {
             left: 8px;
             bottom: 4px;
         }
+
+        .header-rightside .rightside-container i {
+    color: black;
+}
+
+.header-rightside .rightside-container i:hover{
+    color: var(--button-titleblue);
+}
 
 
         .header-container {
@@ -2393,6 +2431,14 @@ a:visited {
             bottom: 4px;
         }
 
+        .header-rightside .rightside-container i {
+    color: black;
+}
+
+.header-rightside .rightside-container i:hover{
+    color: var(--button-titleblue);
+}
+
         .header-container .header-rightside .rightside-container a {
            padding-right: 10px;
         }
@@ -2768,6 +2814,14 @@ a:visited {
             position: relative;
             margin-right: 20px;
         }
+
+        .header-rightside .rightside-container i {
+    color: black;
+}
+
+.header-rightside .rightside-container i:hover{
+    color: var(--button-titleblue);
+}
 
         .header-rightside .fa-magnifying-glass::before {
             content: "\f007";
