@@ -546,19 +546,33 @@ a:visited {
     overflow: hidden;
     white-space: nowrap;
     text-transform: uppercase;
-    padding: 40px 10px;
+    padding: 63px 10px;
 }
 
-.middle_discount-animation-container > p {
+.marquee-track {
+    display: flex;
+    gap: 50px;
+    width: max-content;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-track p {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
-    font-size: 25px;
-    animation: moveText 5s linear infinite;
-    animation-play-state: running;
+    font-size: 30px;
 }
 
-.middle_discount-animation-container:hover p {
+/* .middle_discount-animation-container:hover .marquee-track {
     animation-play-state: paused;
+} */
+
+@keyframes marquee {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* End of midddle discount animation container*/
